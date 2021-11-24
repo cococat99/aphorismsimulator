@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aphorism Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"> 
+      </script>
+
+</head>
+
+
+
+<style>
+
+hr {
+  height: 1px;
+  background-color: black;
+}
+
+.updown { border-left: 1px solid black; 
+    width: 0.1px; 
+    height: 101%; 
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.title {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    position:  absolute;
+    top: 15px;
+    left: 19.5%;
+    line-height: 13px;
+}
+
+.text1 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+.text1-2 {
+    font-family: 'roboto', sans-serif;
+    text-align: right;
+    position: absolute;
+    right: 51%;
+
+      border: none;
+  background-color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.text2 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+
+.text3 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+
+
+.btn {
+  border: none;
+  background-color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+/* On mouse-over */
+.btn:hover {color: #eee;}
+
+
+
+.공자 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.공자명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.공자명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.키케로 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.키케로명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.키케로명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.마키아벨리 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.마키아벨리명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.마키아벨리명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.뉴턴 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.뉴턴명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.뉴턴명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.벤자민 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.벤자민명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.벤자민명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.바이런 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.바이런명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.바이런명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.빅토르 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.빅토르명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.빅토르명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.에머슨 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.에머슨명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.에머슨명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.링컨 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.링컨명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+.링컨명언한글 {
+     position: absolute;
+    top:59%;
+    right: 14%;
+}
+
+
+
+.앤드류 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.앤드류명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.앤드류명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.마크 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.마크명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.마크명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.니체 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.니체명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.니체명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.에디슨 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.에디슨명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.에디슨명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.오스카 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.오스카명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.오스카명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.버나드 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.버나드명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.버나드명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.처칠 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.처칠명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.처칠명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.데일 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.데일명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.데일명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.디즈니 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.디즈니명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.디즈니명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.스티브 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.스티브명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.스티브명언한글 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.코베인 {
+    position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.코베인명언영어 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+.코베인명언한글 {
+     position: absolute;
+    top:66%;
+    right: 12%;
+}
+
+
+
+
+.픽토그램1 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.픽토그램2 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.픽토그램3 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+
+
+.반전배경1 {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+}
+
+
+</style>
+
+
+
+
+<body>
+
+    <div id="gradient" />
+
+    <div class="updown"></div>
+
+
+
+
+
+    <div class="title">Aphorism Simulator</div>
+
+    <br><br>
+
+
+    <a class="btn text1">공자</a> <div class="text1-2">BC 551 ~ BC 479</div>
+<!--앞날을 결정짓고자 하면 옛 것을 공부하라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text2">마르쿠스 툴리우스 키케로</div> <div class="text1-2">BC 106 ~ BC 43</div>
+<!--삶이 있는 한 희망은 있다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text3">니콜로 마키아벨리</a> <div class="text1-2">1469 ~ 1527</div>
+<!--강인한 의지는 어려움과 시련을 초월한다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text4">아이작 뉴턴</a> <div class="text1-2">1643 ~ 1727</div>
+<!--천재란 곧 인내다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text5">벤자민 프랭클린</a> <div class="text1-2">1706 ~ 1790</div>
+<!--오늘 할 수 있는 일을 내일로 미루지 마라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">    
+
+    <a class="btn text6">조지 고든 바이런</a> <div class="text1-2">1788 ~ 1824</div>
+<!--역경은 진리에 도달하는 첫 번째 길이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text7">빅토르 위고</a> <div class="text1-2">1802 ~ 1885</div>
+<!--강인함이 부족한 게 아니라 의지가 부족한 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">    
+
+    <a class="btn text8">랄프 왈도 에머슨</a> <div class="text1-2">1803 ~ 1882</div>
+<!--남을 모방하지 말고 자신의 생각을 고집하라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">        
+
+    <a class="btn text9">에이브러햄 링컨</a> <div class="text1-2">1809 ~ 1865</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">   
+
+    <div class="btn text10">앤드류 카네기</div> <div class="text1-2">1835 ~ 1919</div>
+<!--행복의 비결은 포기해야 할 것을 포기하는 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text11">마크 트웨인</a> <div class="text1-2">1835 ~ 1910</div>
+<!--자신이 대중과 똑같아질 때는 잠시 쉬고 고민할 때이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">      
+
+    <a class="btn text12">프리드리히 니체</a> <div class="text1-2">1844 ~ 1900</div>
+<!--춤추는 별을 잉태하려면 반드시 스스로의 내면에 혼돈을 지녀야 한다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">     
+
+    <a class="btn text13">토머스 에디슨</a> <div class="text1-2">1847 ~ 1931</div>
+<!--성공은 열심히 기다리는 자에게 찾아온다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text14">오스카 와일드</div> <div class="text1-2">1854 ~ 1900</div>
+<!--인기 있는 사람이 되기보단 고정수입을 버는 편이 낫다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text15">조지 버나드 쇼</div> <div class="text1-2">1856 ~ 1950</div>
+<!--성공은 당신이 서 있는 위치가 아니라 당신이 바라보는 방향이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;"> 
+
+    <div class="btn text17">윈스턴 처칠</div> <div class="text1-2">1874 ~ 1965</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text18">데일 카네기</a> <div class="text1-2">1888 ~ 1955</div>
+<!--큰 일을 먼저 하라 작은 일은 저절로 처리될 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">   
+
+    <a class="btn text19">월트 디즈니</a> <div class="text1-2">1901 ~ 1966 </div>
+<!--추구할 수 있는 용기가 있다면 우리의 모든 꿈은 이뤄질 수 있다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">     
+
+    <a class="btn text20">스티브 잡스</a> <div class="text1-2">1955 ~ 2011</div>
+<!--창조란 모든 것을 연결하는 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text21">커트 코베인</a> <div class="text1-2">1967 ~ 1994</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+
+
+
+
+
+
+
+
+
+
+    <a class="반전배경1">
+    <img id="반전배경1" src="image/반전배경1.png" style="width:831px; height:975px;">
+    </a>
+
+     <a class="픽토그램1">
+    <img id="픽토그램1" src="image/픽토그램1.png" style="width:350px; height:350px;">
+    </a>
+
+     <a class="픽토그램2">
+    <img id="픽토그램2" src="image/픽토그램2.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="픽토그램3">
+    <img id="픽토그램3" src="image/픽토그램3.png" style="width:350px; height:350px;">
+    </a>
+
+
+
+    <a class="공자">
+    <img id="공자" src="image/공자.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="공자명언영어">
+    <img id="공자명언영어" src="image/공자명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="공자명언한글">
+    <img id="공자명언한글" src="image/공자명언한글.png" style="width:400px;">
+    </a>
+
+
+    <a class="키케로">
+    <img id="키케로" src="image/키케로.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="키케로명언영어">
+    <img id="키케로명언영어" src="image/키케로명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="키케로명언한글">
+    <img id="키케로명언한글" src="image/키케로명언한글.png" style="width:400px;">
+    </a>
+
+
+    <a class="마키아벨리">
+    <img id="마키아벨리" src="image/마키아벨리.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="마키아벨리명언영어">
+    <img id="마키아벨리명언영어" src="image/마키아벨리명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="마키아벨리명언한글">
+    <img id="마키아벨리명언한글" src="image/마키아벨리명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="뉴턴">
+    <img id="뉴턴" src="image/뉴턴.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="뉴턴명언영어">
+    <img id="뉴턴명언영어" src="image/뉴턴명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="뉴턴명언한글">
+    <img id="뉴턴명언한글" src="image/뉴턴명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="벤자민">
+    <img id="벤자민" src="image/벤자민.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="벤자민명언영어">
+    <img id="벤자민명언영어" src="image/벤자민명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="벤자민명언한글">
+    <img id="벤자민명언한글" src="image/벤자민명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="바이런">
+    <img id="바이런" src="image/바이런.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="바이런명언영어">
+    <img id="바이런명언영어" src="image/바이런명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="바이런명언한글">
+    <img id="바이런명언한글" src="image/바이런명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="빅토르">
+    <img id="빅토르" src="image/빅토르.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="빅토르명언영어">
+    <img id="빅토르명언영어" src="image/빅토르명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="빅토르명언한글">
+    <img id="빅토르명언한글" src="image/빅토르명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="에머슨">
+    <img id="에머슨" src="image/에머슨.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="에머슨명언영어">
+    <img id="에머슨명언영어" src="image/에머슨명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="에머슨명언한글">
+    <img id="에머슨명언한글" src="image/에머슨명언한글.png" style="width:400px;">
+    </a>
+
+
+
+
+    <a class="링컨">
+    <img id="링컨" src="image/링컨.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="링컨명언영어">
+    <img id="링컨명언영어" src="image/링컨명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="링컨명언한글">
+    <img id="링컨명언한글" src="image/링컨명언한글.png" style="width:330px;">
+    </a>
+
+
+
+        <a class="앤드류">
+    <img id="앤드류" src="image/앤드류.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="앤드류명언영어">
+    <img id="앤드류명언영어" src="image/앤드류명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="앤드류명언한글">
+    <img id="앤드류명언한글" src="image/앤드류명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="마크">
+    <img id="마크" src="image/마크.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="마크명언영어">
+    <img id="마크명언영어" src="image/마크명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="마크명언한글">
+    <img id="마크명언한글" src="image/마크명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="니체">
+    <img id="니체" src="image/니체.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="니체명언영어">
+    <img id="니체명언영어" src="image/니체명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="니체명언한글">
+    <img id="니체명언한글" src="image/니체명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="에디슨">
+    <img id="에디슨" src="image/에디슨.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="에디슨명언영어">
+    <img id="에디슨명언영어" src="image/에디슨명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="에디슨명언한글">
+    <img id="에디슨명언한글" src="image/에디슨명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="오스카">
+    <img id="오스카" src="image/오스카.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="오스카명언영어">
+    <img id="오스카명언영어" src="image/오스카명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="오스카명언한글">
+    <img id="오스카명언한글" src="image/오스카명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="버나드">
+    <img id="버나드" src="image/버나드.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="버나드명언영어">
+    <img id="버나드명언영어" src="image/버나드명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="버나드명언한글">
+    <img id="버나드명언한글" src="image/버나드명언한글.png" style="width:400px;">
+    </a>
+
+    <a class="처칠">
+    <img id="처칠" src="image/처칠.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="처칠명언영어">
+    <img id="처칠명언영어" src="image/처칠명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="처칠명언한글">
+    <img id="처칠명언한글" src="image/처칠명언한글.png" style="width:400px;">
+    </a>
+
+
+
+
+        <a class="데일">
+    <img id="데일" src="image/데일.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="데일명언영어">
+    <img id="데일명언영어" src="image/데일명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="데일명언한글">
+    <img id="데일명언한글" src="image/데일명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="디즈니">
+    <img id="디즈니" src="image/디즈니.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="디즈니명언영어">
+    <img id="디즈니명언영어" src="image/디즈니명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="디즈니명언한글">
+    <img id="디즈니명언한글" src="image/디즈니명언한글.png" style="width:400px;">
+    </a>
+
+        <a class="스티브">
+    <img id="스티브" src="image/스티브.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="스티브명언영어">
+    <img id="스티브명언영어" src="image/스티브명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="스티브명언한글">
+    <img id="스티브명언한글" src="image/스티브명언한글.png" style="width:400px;">
+    </a>
+
+
+    <a class="코베인">
+    <img id="코베인" src="image/코베인.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="코베인명언영어">
+    <img id="코베인명언영어" src="image/코베인명언영어.png" style="width:600px;">
+    </a>
+
+    <a class="코베인명언한글">
+    <img id="코베인명언한글" src="image/코베인명언한글.png" style="width:400px;">
+    </a>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+ 
+<script>
+    $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#반전배경1").hide();
+            $("#픽토그램1").hide();
+            $("#픽토그램2").hide();
+            $("#픽토그램3").hide();
+
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+            $("#공자명언한글").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+            $("#키케로명언한글").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+            $("#마키아벨리명언한글").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+            $("#뉴턴명언한글").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+            $("#벤자민명언한글").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+            $("#바이런명언한글").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+            $("#빅토르명언한글").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+            $("#에머슨명언한글").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+            $("#링컨명언한글").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+            $("#앤드류명언한글").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+            $("#마크명언한글").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+            $("#니체명언한글").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+            $("#에디슨명언한글").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+            $("#오스카명언한글").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+            $("#버나드명언한글").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+            $("#처칠명언한글").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+            $("#데일명언한글").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+            $("#디즈니명언한글").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+            $("#스티브명언한글").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+            $("#코베인명언한글").hide();
+ 
+
+
+
+
+            /*공자*/
+            $(".text1").click(function(){
+            $("#공자").show();
+            $("#공자명언영어").show();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#공자").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#공자").hide();
+                $("#공자명언영어").hide();
+                $("#공자명언한글").show();
+                }, function(){
+                $("#공자").show();
+                $("#공자명언영어").show();
+                $("#공자명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+
+
+            /*키케로*/
+            $(".text2").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").show();
+            $("#키케로명언영어").show();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+                $("#키케로").hover(function(){
+                $("#키케로").hide();
+                $("#키케로명언영어").hide();
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+                $("#키케로명언한글").show();
+                }, function(){
+                $("#키케로").show();
+                $("#키케로명언영어").show();
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+                $("#키케로명언한글").hide();
+            });
+
+
+
+
+
+           /*마키아벨리*/
+            $(".text3").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").show();
+            $("#마키아벨리명언영어").show();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+                $("#마키아벨리").hover(function(){
+                $("#마키아벨리").hide();
+                $("#마키아벨리명언영어").hide();
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+                $("#마키아벨리명언한글").show();
+                }, function(){
+                $("#마키아벨리").show();
+                $("#마키아벨리명언영어").show();
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+                $("#마키아벨리명언한글").hide();
+            });
+
+
+
+            /*뉴턴*/
+            $(".text4").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").show();
+            $("#뉴턴명언영어").show();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#뉴턴").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#뉴턴").hide();
+                $("#뉴턴명언영어").hide();
+                $("#뉴턴명언한글").show();
+                }, function(){
+                $("#뉴턴").show();
+                $("#뉴턴명언영어").show();
+                $("#뉴턴명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+            /*벤자민*/
+            $(".text5").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").show();
+            $("#벤자민명언영어").show();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#벤자민").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#벤자민").hide();
+                $("#벤자민명언영어").hide();
+                $("#벤자민명언한글").show();
+                }, function(){
+                $("#벤자민").show();
+                $("#벤자민명언영어").show();
+                $("#벤자민명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+
+            /*바이런*/
+            $(".text6").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").show();
+            $("#바이런명언영어").show();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#바이런").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+
+                $("#바이런").hide();
+                $("#바이런명언영어").hide();
+                $("#바이런명언한글").show();
+                }, function(){
+                $("#바이런").show();
+                $("#바이런명언영어").show();
+                $("#바이런명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+            });
+
+
+
+
+            /*빅토르*/
+            $(".text7").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").show();
+            $("#빅토르명언영어").show();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#빅토르").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#빅토르").hide();
+                $("#빅토르명언영어").hide();
+                $("#빅토르명언한글").show();
+                }, function(){
+                $("#빅토르").show();
+                $("#빅토르명언영어").show();
+                $("#빅토르명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+
+            /*에머슨*/
+            $(".text8").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").show();
+            $("#에머슨명언영어").show();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#에머슨").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#에머슨").hide();
+                $("#에머슨명언영어").hide();
+                $("#에머슨명언한글").show();
+                }, function(){
+                $("#에머슨").show();
+                $("#에머슨명언영어").show();
+                $("#에머슨명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+
+            /*링컨*/
+            $(".text9").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").show();
+            $("#링컨명언영어").show();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#링컨").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#링컨").hide();
+                $("#링컨명언영어").hide();
+                $("#링컨명언한글").show();
+                }, function(){
+                $("#링컨").show();
+                $("#링컨명언영어").show();
+                $("#링컨명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+            /*앤드류*/
+            $(".text10").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").show();
+            $("#앤드류명언영어").show();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#앤드류").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+
+                $("#앤드류").hide();
+                $("#앤드류명언영어").hide();
+                $("#앤드류명언한글").show();
+                }, function(){
+                $("#앤드류").show();
+                $("#앤드류명언영어").show();
+                $("#앤드류명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+            });            
+
+
+
+
+            /*마크*/
+            $(".text11").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").show();
+            $("#마크명언영어").show();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#마크").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#마크").hide();
+                $("#마크명언영어").hide();
+                $("#마크명언한글").show();
+                }, function(){
+                $("#마크").show();
+                $("#마크명언영어").show();
+                $("#마크명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+
+            /*니체*/
+            $(".text12").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").show();
+            $("#니체명언영어").show();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#니체").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#니체").hide();
+                $("#니체명언영어").hide();
+                $("#니체명언한글").show();
+                }, function(){
+                $("#니체").show();
+                $("#니체명언영어").show();
+                $("#니체명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+            /*에디슨*/
+            $(".text13").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").show();
+            $("#에디슨명언영어").show();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#에디슨").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+
+                $("#에디슨").hide();
+                $("#에디슨명언영어").hide();
+                $("#에디슨명언한글").show();
+                }, function(){
+                $("#에디슨").show();
+                $("#에디슨명언영어").show();
+                $("#에디슨명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+            });
+
+
+
+            /*오스카*/
+            $(".text14").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").show();
+            $("#오스카명언영어").show();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#오스카").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#오스카").hide();
+                $("#오스카명언영어").hide();
+                $("#오스카명언한글").show();
+                }, function(){
+                $("#오스카").show();
+                $("#오스카명언영어").show();
+                $("#오스카명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+
+            /*버나드*/
+            $(".text15").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").show();
+            $("#버나드명언영어").show();
+
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#버나드").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#버나드").hide();
+                $("#버나드명언영어").hide();
+                $("#버나드명언한글").show();
+                }, function(){
+                $("#버나드").show();
+                $("#버나드명언영어").show();
+                $("#버나드명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+            /*처칠*/
+            $(".text17").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").show();
+            $("#처칠명언영어").show();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#처칠").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#처칠").hide();
+                $("#처칠명언영어").hide();
+                $("#처칠명언한글").show();
+                }, function(){
+                $("#처칠").show();
+                $("#처칠명언영어").show();
+                $("#처칠명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+            /*데일*/
+            $(".text18").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").show();
+            $("#데일명언영어").show();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#데일").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+
+                $("#데일").hide();
+                $("#데일명언영어").hide();
+                $("#데일명언한글").show();
+                }, function(){
+                $("#데일").show();
+                $("#데일명언영어").show();
+                $("#데일명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+            });            
+
+
+
+
+            /*디즈니*/
+            $(".text19").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").show();
+            $("#디즈니명언영어").show();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#디즈니").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램1").show();
+
+                $("#디즈니").hide();
+                $("#디즈니명언영어").hide();
+                $("#디즈니명언한글").show();
+                }, function(){
+                $("#디즈니").show();
+                $("#디즈니명언영어").show();
+                $("#디즈니명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램1").hide();
+            });
+
+
+
+
+            /*스티브*/
+            $(".text20").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").show();
+            $("#스티브명언영어").show();
+
+            $("#코베인").hide();
+            $("#코베인명언영어").hide();
+        });
+
+
+            $("#스티브").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램2").show();
+
+                $("#스티브").hide();
+                $("#스티브명언영어").hide();
+                $("#스티브명언한글").show();
+                }, function(){
+                $("#스티브").show();
+                $("#스티브명언영어").show();
+                $("#스티브명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램2").hide();
+            });
+
+
+
+
+            /*코베인*/
+            $(".text21").click(function(){
+            $("#공자").hide();
+            $("#공자명언영어").hide();
+
+            $("#키케로").hide();
+            $("#키케로명언영어").hide();
+
+            $("#마키아벨리").hide();
+            $("#마키아벨리명언영어").hide();
+
+            $("#뉴턴").hide();
+            $("#뉴턴명언영어").hide();
+
+            $("#벤자민").hide();
+            $("#벤자민명언영어").hide();
+
+            $("#바이런").hide();
+            $("#바이런명언영어").hide();
+
+            $("#빅토르").hide();
+            $("#빅토르명언영어").hide();
+
+            $("#에머슨").hide();
+            $("#에머슨명언영어").hide();
+
+            $("#링컨").hide();
+            $("#링컨명언영어").hide();
+
+            $("#앤드류").hide();
+            $("#앤드류명언영어").hide();
+
+            $("#마크").hide();
+            $("#마크명언영어").hide();
+
+            $("#니체").hide();
+            $("#니체명언영어").hide();
+
+            $("#에디슨").hide();
+            $("#에디슨명언영어").hide();
+
+            $("#오스카").hide();
+            $("#오스카명언영어").hide();
+
+            $("#버나드").hide();
+            $("#버나드명언영어").hide();
+
+            $("#처칠").hide();
+            $("#처칠명언영어").hide();
+
+            $("#데일").hide();
+            $("#데일명언영어").hide();
+
+            $("#디즈니").hide();
+            $("#디즈니명언영어").hide();
+
+            $("#스티브").hide();
+            $("#스티브명언영어").hide();
+
+            $("#코베인").show();
+            $("#코베인명언영어").show();
+        });
+
+
+            $("#코베인").hover(function(){
+                $("#반전배경1").show();
+                $("#픽토그램3").show();
+
+                $("#코베인").hide();
+                $("#코베인명언영어").hide();
+                $("#코베인명언한글").show();
+                }, function(){
+                $("#코베인").show();
+                $("#코베인명언영어").show();
+                $("#코베인명언한글").hide();
+
+                $("#반전배경1").hide();
+                $("#픽토그램3").hide();
+            });
+
+
+        });
+</script>
+
+
+
+</html>
